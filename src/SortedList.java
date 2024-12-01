@@ -21,15 +21,15 @@ public class SortedList {
             int comparison = list.get(mid).compareTo(element);
 
             if (comparison == 0) {
-                return mid; // Exact match
+                return mid;
             } else if (comparison < 0) {
-                left = mid + 1; // Move to the right
+                left = mid + 1;
             } else {
-                right = mid - 1; // Move to the left
+                right = mid - 1;
             }
         }
 
-        return left; // Position where the element should be inserted
+        return left;
     }
 
     public String search(String element) {
