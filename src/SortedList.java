@@ -21,15 +21,15 @@ public class SortedList {
             int comparison = list.get(mid).compareTo(element);
 
             if (comparison == 0) {
-                return mid;
+                return mid; // Exact match
             } else if (comparison < 0) {
-                left = mid + 1;
+                left = mid + 1; // Move to the right
             } else {
-                right = mid - 1;
+                right = mid - 1; // Move to the left
             }
         }
 
-        return left;
+        return left; // Position where the element should be inserted
     }
 
     public String search(String element) {
@@ -41,7 +41,7 @@ public class SortedList {
             int comparison = list.get(mid).compareTo(element);
 
             if (comparison == 0) {
-                return "Element found: " + list.get(mid);
+                return "Element found: " + list.get(mid) + " at index " + mid;
             } else if (comparison < 0) {
                 left = mid + 1;
             } else {
@@ -49,7 +49,7 @@ public class SortedList {
             }
         }
 
-        return "Element not found. Should be at position: " + left;
+        return "Element not found. Should be inserted at index: " + left;
     }
 
     public String getAllElements() {
